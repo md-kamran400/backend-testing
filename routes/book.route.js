@@ -4,8 +4,6 @@ const BookModel = require("../models/book.model")
 const bookRouter = Router()
 
 
-bookRouter.use(auth)
-
 bookRouter.post("/add", async(req, res)=>{
     try {
         let book = await new BookModel(req.body)
